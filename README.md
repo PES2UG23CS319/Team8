@@ -38,19 +38,28 @@ Gazebo → Robot → Camera → /camera/image_raw → Perception Node → OpenCV
 
 ```
 ball_tracker_ws/
-│── src/
-│   └── ball_tracker/
-│       ├── launch/
-│       │   └── launch_sim.launch.py
-│       ├── urdf/
-│       │   └── robot.urdf
-│       ├── worlds/
-│       │   └── ball_world.world
-│       ├── ball_tracker/
-│       │   ├── perception_node.py
-│       │   └── control_node.py (optional)
-│       ├── package.xml
-│       └── setup.py
+└── src/
+    └── ball_tracker/
+        ├── ball_tracker/
+        │   ├── __init__.py
+        │   ├── perception_node.py     ← OpenCV HSV detector
+        │   └── control_node.py        ← Velocity controller
+        │
+        ├── description/
+        │   └── robot.urdf.xacro       ← Robot model + camera
+        │
+        ├── launch/
+        │   ├── launch_sim.launch.py   ← Full system launcher
+        │   └── rsp.launch.py          ← Robot state publisher
+        │
+        ├── worlds/
+        │   └── ball_world.world       ← Gazebo world (red, green, blue balls)
+        │
+        ├── CMakeLists.txt
+        ├── package.xml
+        ├── setup.py
+        ├── README.md
+        └── .gitignore
 ```
 
 ---

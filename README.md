@@ -133,24 +133,24 @@ l → right
 
 ## 👥 Team Contributions
 
-Maitreyi — System Integration & Launch (launch_sim.launch.py)
+Maitreyi V Raghavan — System Integration & Launch (launch_sim.launch.py)
 - Initialize Gazebo simulation
 - Load custom world environment
 - Spawn robot model into simulation
 - Launch perception node and manage system startup
 
-Atharv — Simulation Environment (ball_world.world)
+Atharv Nair — Simulation Environment (ball_world.world)
 - Design ground plane and lighting
 - Create and configure ball models (red, green, blue)
 - Define object positions in the environment
 
-Mansha — Robot Modeling (robot.urdf.xacro)
+Mansha Taori — Robot Modeling (robot.urdf.xacro)
 - Define robot base and chassis structure
 - Configure wheels and joints
 - Attach and position camera link
 - Integrate camera sensor plugin
 
-Manaswi — Perception System (perception_node.py)
+Manaswi Mishra — Perception System (perception_node.py)
 - Subscribe to camera image topic
 - Convert ROS image to OpenCV format
 - Perform HSV color space conversion

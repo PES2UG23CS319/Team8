@@ -154,7 +154,6 @@ Manaswi — Perception System (perception_node.py)
 - Subscribe to camera image topic
 - Convert ROS image to OpenCV format
 - Perform HSV color space conversion
-- Apply color masking for red and green detection
 - Detect contours and visualize output
 
 ## 📎 Demo

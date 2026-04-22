@@ -6,25 +6,31 @@ detection and drives toward them using a simple perception → decision → cont
 ---
 
 ## Folder Structure
-
 ```
+
 ball_tracker_ws/
 └── src/
     └── ball_tracker/
         ├── ball_tracker/
         │   ├── __init__.py
-        │   ├── perception_node.py   ← OpenCV HSV detector
-        │   └── control_node.py      ← State-machine velocity controller
+        │   ├── perception_node.py     ← OpenCV HSV detector
+        │   └── control_node.py        ← Velocity controller
+        │
         ├── description/
-        │   └── robot.urdf.xacro     ← Diff-drive robot + camera
-        ├── worlds/
-        │   └── ball_world.world     ← Gazebo world (red, green, blue balls)
+        │   └── robot.urdf.xacro       ← Robot model + camera
+        │
         ├── launch/
-        │   ├── rsp.launch.py        ← robot_state_publisher only
-        │   └── launch_sim.launch.py ← Full simulation launcher
+        │   ├── launch_sim.launch.py   ← Full system launcher
+        │   └── rsp.launch.py          ← Robot state publisher
+        │
+        ├── worlds/
+        │   └── ball_world.world       ← Gazebo world (red, green, blue balls)
+        │
         ├── CMakeLists.txt
         ├── package.xml
-        └── setup.py
+        ├── setup.py
+        ├── README.md
+        └── .gitignore
 ```
 
 ---
